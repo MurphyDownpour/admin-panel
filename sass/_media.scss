@@ -1,0 +1,45 @@
+@media screen and (max-width: 1070px) and (min-width: 992px) {
+	.user-info{
+    	top: 3px;
+	}
+
+}
+
+@media (min-width: 992px) and (max-width: 1347px) {
+	#teamClose{
+		display: none;
+	}
+	#menuClose{
+		display: none;
+	}
+	// .menu{
+	// 	display: block;
+	// 	position: absolute;
+	// 	z-index: 1;
+	// 	left: 17px;
+	// 	height: 380px;
+	// }
+	#prof{
+		display: none;
+	}
+	#projectClose{
+		width: 100%;
+	}
+	#projSec{
+		width: 100%;
+	}
+}
+
+@media (min-width: 520px) and (max-width: 992px) {
+	.menu-items{
+		>a{
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (max-width: 520px){
+	#widget{
+		display: none;
+	}
+}

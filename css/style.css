@@ -1,3 +1,27 @@
+@media screen and (max-width: 1070px) and (min-width: 992px) {
+  .user-info {
+    top: 3px; } }
+@media (min-width: 992px) and (max-width: 1347px) {
+  #teamClose {
+    display: none; }
+
+  #menuClose {
+    display: none; }
+
+  #prof {
+    display: none; }
+
+  #projectClose {
+    width: 100%; }
+
+  #projSec {
+    width: 100%; } }
+@media (min-width: 520px) and (max-width: 992px) {
+  .menu-items > a {
+    margin: 0 auto; } }
+@media (max-width: 520px) {
+  #widget {
+    display: none; } }
 body {
   font-family: 'Roboto', sans-serif; }
 
@@ -139,6 +163,7 @@ body {
         background-color: #fff;
         border-radius: 3px;
         padding: 25px;
+        padding-left: 36px;
         margin-top: 35px; }
         .main > .col-md-10 > .row > .content > .col-md-12 > :first-child > .col-md-3 > .team-block > .title > i {
           display: inline-block;
@@ -219,6 +244,7 @@ body {
         background-color: #fff;
         border-radius: 3px;
         padding: 25px;
+        padding-left: 36px;
         padding-bottom: 83px;
         margin-top: 35px; }
         .main > .col-md-10 > .row > .content > .col-md-12 > :first-child > .col-md-9 > .project-block > .title > i {
