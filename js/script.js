@@ -109,23 +109,3 @@ var chart = new Chart(ctx, {
         }
     }
 });
-
-
-// Media query via Jquery
-// if (window.matchMedia("(min-width: 992px)").matches) {
-//         $("#prof").css('display', 'none');
-//         $(".col-md-10").addClass('fullWidth');
-//         a = false;
-
-//         $("#toggleNav").click(function(event) {
-//         if (a == true) {
-//             $(".menu, #prof").css('display', 'block');
-//             a = false;
-//         }
-//         else {
-//             $(".menu, #prof").css('display', 'none');
-//             a = true;
-//         }
-    
-// });
-// }
