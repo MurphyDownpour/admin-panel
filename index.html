@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin panel</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/circle.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header id="header">
+		<div class="col-md-2" id="prof">
+			<div class="row">
+				<div class="user-profile">
+					<div class="avatar"></div>
+					<div class="user-info">
+						<p>to-do buddy</p>
+						<p>neamu tiberiu</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="page-heading">
+					<i class="fa fa-bars" aria-hidden="true" id="toggleNav"></i>
+					<h1 class="heading-title">project <span>honeycomb</span></h1>
+					<button>
+						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						<p>Add Widget</p>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="main">
+		<div class="col-md-2">
+			<div class="row">
+				<div class="menu">
+					<div class="menu-items">
+						<a href="#">
+							<i class="fa fa-minus-circle" aria-hidden="true"></i>Dashboard
+						</a>
+						<a href="#">
+							<i class="fa fa-picture-o" aria-hidden="true"></i>Visual Attachments
+						</a>
+						<a href="#">
+							<i class="fa fa-eye" aria-hidden="true"></i>Project Statistics
+						</a>
+						<a href="#">
+							<i class="fa fa-user" aria-hidden="true"></i>Team Members
+						</a>
+						<a href="#">
+							<i class="fa fa-server" aria-hidden="true"></i>Server Data
+						</a>
+						<a href="#">
+							<i class="fa fa-folder" aria-hidden="true"></i>Folder Settings
+						</a>
+						<a href="#" id="messages">
+							<i class="fa fa-comment" aria-hidden="true"></i>Messages
+						</a>
+					</div>
+					<div class="progress-circle">
+						<div class="c100 p80" id="div_loading_progress">
+						  <span id="span_progress">80%</span>
+						  <div class="slice">
+						    <div class="bar"></div>
+						    <div class="fill"></div>
+						  </div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="content">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="team-block">
+									<div class="title">
+										<p>team involved</p>
+										<i class="fa fa-times-circle-o" aria-hidden="true" id="closeTeam" onclick="closeTeam()"></i>
+									</div>
+									<hr>
+									<div class="team-members">
+										<div class="teammate">
+											<div style="background-image: url(img/teammate1.png);">
+											</div>
+											<div class="teammate-info">
+												<p>Jack O'Connely</p>
+												<p>UI / UX Designer</p>
+											</div>
+										</div>
+										<div class="teammate">
+											<div style="background-image: url(img/teammate2.png);">
+											</div>
+											<div class="teammate-info">
+												<p>Antonio King</p>
+												<p>Web Designer</p>
+											</div>
+										</div>
+										<div class="teammate">
+											<div style="background-image: url(img/teammate3.png);">
+											</div>
+											<div class="teammate-info">
+												<p>Denise Jackson</p>
+												<p>Developer</p>
+											</div>
+										</div>
+										<div class="teammate">
+											<div style="background-image: url(img/teammate4.png);">
+											</div>
+											<div class="teammate-info">
+												<p>Andy K.</p>
+												<p>Project Manager</p>
+											</div>
+										</div>
+										<div class="teammate">
+											<div style="background-image: url(img/teammate5.png);">
+											</div>
+											<div class="teammate-info">
+												<p>Jamie Morano</p>
+												<p>Project Manager</p>
+											</div>
+										</div>
+									</div>
+									<button>
+										<i class="fa fa-plus-circle" aria-hidden="true"></i>
+										<p>Add Teammate</p>
+									</button>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="project-block">
+									<div class="title">
+										<p>project activity</p>
+										<i class="fa fa-times-circle-o" aria-hidden="true" id="closeProject" onclick="closeProject()"></i>
+									</div>
+									<hr>
+									<div class="reports">
+										<div class="report">
+											<div class="status">
+												<div class="status-name" id="upload">
+													<p>upload</p>
+												</div>
+												<p>11:50 am</p>
+											</div>
+											<div class="description">
+												<div class="left">
+													<h3>Comb - Homepage.psd</h3>
+													<p>by Antonio King</p>
+												</div>
+												<div class="right">
+													<div id="progressbar">
+														<div id="myBar"></div>
+													</div>
+													<p>(12.3 of 30 mb)</p>
+												</div>
+											</div>
+										</div>
+										<div class="report">
+											<div class="status">
+												<div class="status-name" id="task">
+													<p>task</p>
+												</div>
+												<p>11:40 am</p>
+											</div>
+											<div class="description">
+												<div class="left">
+													<h3>Contact_Form.psd / <span>Development</span></h3>
+													<p>by Andy K.</p>
+												</div>
+												<div class="right">
+													<button class="sameButtons">
+														<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+														View
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="report">
+											<div class="status">
+												<div class="status-name" id="deleted">
+													<p>deleted</p>
+												</div>
+												<p>11:27 am</p>
+											</div>
+											<div class="description">
+												<div class="left">
+													<h3>Development UI Kit (v.12.08.2013)</h3>
+													<p>by Denise Jackson</p>
+												</div>
+												<div class="right">
+													<button class="restoreButton" onclick="restore()">
+														<i class="fa fa-repeat" aria-hidden="true"></i>
+														Restore
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="report">
+											<div class="status">
+												<div class="status-name" id="working">
+													<p>working</p>
+												</div>
+												<p>11:20 am</p>
+											</div>
+											<div class="description">
+												<div class="left">
+													<h3>Graphs & Statistics.psd</h3>
+													<p>by Neamu Tiberiu</p>
+												</div>
+												<div class="right">
+													<button class="sameButtons">
+														<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+														Peek
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="chart-sec">
+								<canvas id="myChart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
